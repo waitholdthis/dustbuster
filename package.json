@@ -1,0 +1,17 @@
+{
+  "name": "framerestore-studio",
+  "version": "3.8.0",
+  "private": true,
+  "description": "Browser-based, local-only film restoration workspace: 16-bit, GPU-accelerated film restoration: optical-flow dust removal, Click&Fix, frame rebuild, stabilisation, tracked protect regions, infrared cleaning, faded-colour and separation registration, damaged-frame detection, keyframes, OpenEXR, batch queue and video export.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "node tests/smoke-check.mjs && node --test tests/engine.test.mjs tests/io.test.mjs",
+    "test:browser": "node tests/browser-e2e.mjs",
+    "test:all": "npm test && npm run test:browser",
+    "build": "node tools/build.mjs",
+    "bench": "node tools/bench.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
